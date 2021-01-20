@@ -37,6 +37,22 @@ else :
 
 #Pyton Problem Seti 4
 
+#Sıfırı taşıma
+
+liste = list(input("Aralarında boşluk kullanmadan sayılardan oluşan bir dizi giriniz: "))
+elemansayisi = int(input("Girdiğiniz dizideki 0 elemanı sayısını giriniz: "))
+elemansayisi2 = elemansayisi + 2
+elemansayisi3 = elemansayisi2 + 2
+while elemansayisi < elemansayisi2 :
+    elemansayisi += 1
+    liste.remove(min(liste))
+
+while elemansayisi2 < elemansayisi3 :
+    elemansayisi2 += 1
+    liste.insert(0,0)
+
+print(liste)
+
 #Pyton Problem Seti 5
 
 #hayalimdeki sınıf
