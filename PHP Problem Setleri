@@ -6,5 +6,38 @@ This repo created by Onur Tursun
 #PHP Problem Seti 2
 
 #PHP Problem Seti 3
+#1.php sayfası
+    <html>
+        <head>
+        <title>Asal Sayı Hesaplama</title>
+        </head>
+        <body>
+            <form action="asalsayılarphp.php" method="POST">
+                <input type="text" name="asalsayılar" placeholder="Bir sayı giriniz">
+                <input type="submit" name="Gönder">
+            </form>
+
+        </body>
+    </html>
+#2.php sayfası
+<?php
+    $sayı=$_POST["asalsayılar"];
+    $parametre = 1 ;
+    $liste = array();
+    for ($parametre = 1; $parametre <= $sayı; $parametre ++) {
+        if($sayı % $parametre == 0){
+            array_push($liste,"a");
+        }   
+        elseif ($sayı % $parametre != 0){
+            array_push($liste,"b");
+        } 
+    } 
+    if(array_reverse($liste) == $liste){
+        echo "Bu bir asal sayıdır";
+    }   
+    else{
+        echo "Bu bir asal sayı değildir";
+    }
+?>
 
 #PHP Problem Seti 4
