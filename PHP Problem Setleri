@@ -4,7 +4,40 @@ This repo created by Onur Tursun
 #PHP Problem Seti 1
 
 #PHP Problem Seti 2
+#1.php sayfası
+    <html>
+        <head>
+        <title>Mükemmel Sayı Hesaplama</title>
+        </head>
+        <body>
+            <form action="mükemmelsayı2.php" method="POST">
+                <input type="text" name="müq" placeholder="Bir sayı giriniz">
+                <input type="submit" name="Gönder">
+            </form>
 
+        </body>
+    </html>
+#2.php sayfası
+<?php
+    $sayı=$_POST["müq"];
+    $parametre = 1 ;
+    $liste = array();
+    for ($parametre = 1; $parametre < $sayı; $parametre ++) {
+        if($sayı % $parametre == 0){
+            array_push($liste,$parametre);
+        }   
+        else {    
+        } 
+    } 
+    $toplam = array_sum($liste);
+    if($toplam == $sayı){
+        echo "Bu bir mükemmel sayıdır.";
+    }
+    else {
+        echo "Bu bir mükemmel sayı değildir.";
+    }
+
+?>
 #PHP Problem Seti 3
 #1.php sayfası
     <html>
