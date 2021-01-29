@@ -2,7 +2,26 @@
 This repo created by Onur Tursun
 
 #PHP Problem Seti 1
+<?php
 
+$saat = rand(0000,2300);
+if(0600 < $saat AND $saat < 1000){
+    echo "Günaydın";
+}
+else if(1000 < $saat AND $saat < 1700){
+    echo "İyi Günler";
+        
+}
+else if(1700 < $saat AND $saat < 2000){
+    echo "İyi Akşamlar";
+}
+else if(2000 < $saat AND $saat < 0000){
+    echo "İyi Geceler";
+}
+else{
+    echo "Esenlikler Dilerim";
+}
+?>
 #PHP Problem Seti 2
 #1.php sayfası
     <html>
