@@ -93,3 +93,70 @@ else{
 ?>
 
 #PHP Problem Seti 4
+#1. php sayfası
+<html>
+        <head>
+        <title>Para Üstü İşlemleri</title>
+        </head>
+        <body>
+            <h1>Teknik aksaklıklardan dolayı 300 kuruşa kadar olan para üstlerinin işlemi hesaplanabilir</h1>
+            <form action="SONÖDEV.php" method="POST">
+                <input type="text" name="PARAÜSTÜ" placeholder="Para üstünü kuruş olarak giriniz">
+                <input type="submit" name="Gönder">
+            </form>
+
+        </body>
+    </html>
+#2.php sayfası
+<?php
+$para = $_POST["PARAÜSTÜ"];
+# 1 5 10 25 50 100
+if($para<5){
+    echo $para." "."bozuk para kullanarak para üstünüz ödenmiştir.";
+}
+elseif(15>$para AND $para>5){
+    $sonuç = ($para%5)+1;
+    echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";  
+}
+elseif(40>$para AND $para>=15){
+    $sonuç = ($para%5)+2;
+    echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";  
+}
+elseif(90>$para AND $para>=40){
+    $sonuç = ($para%5)+3;
+    echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";  
+}
+elseif(190>$para AND $para>=90){
+    $sonuç = ($para%5)+4;
+    echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";  
+}
+elseif(200>$para AND $para>=190){
+    $sonuç = ($para%5)+5;
+    echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";  
+}
+elseif($para>=200){
+    $basamak = (integer)($para/100);
+    if($para<205){
+        $sonuç = $basamak + ($para%5);
+        echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";
+    }
+    elseif(215>$para AND $para>=205){
+        $sonuç = (($para%5)+1)+$basamak;
+        echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";  
+    }
+    elseif(240>$para AND $para>=215){
+        $sonuç = (($para%5)+2)+$basamak;
+        echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";  
+    }
+    elseif(290>$para AND $para>=240){
+        $sonuç = (($para%5)+3)+$basamak;
+        echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";  
+    }
+    elseif(300>$para AND $para>=290){
+        $sonuç = (($para%5)+4)+$basamak;
+        echo $sonuç." "."bozuk para kullanarak para üstünüz ödenmiştir.";  
+    }
+
+     
+}
+?>
