@@ -23,6 +23,7 @@ else{
 }
 ?>
 #PHP Problem Seti 2
+#sayının tam bölenlerini bir listeye attım ve toplamları eşit olan yani mükemmel sayıyı bulmuş oldum.
 #1.php sayfası
     <html>
         <head>
@@ -58,6 +59,9 @@ else{
 
 ?>
 #PHP Problem Seti 3
+#Eğer sayı tam bölünüyorsa "a" bölünmüyorsa "b" yazdırarak bir liste oluşturdum
+asal sayıların listelerinde sadece başta ve sonda olacağından listenin ters çevrilmiş hali aynı olacaktı 
+böylece asal olanı tespit etmiş oldum.
 #1.php sayfası
     <html>
         <head>
@@ -93,6 +97,7 @@ else{
 ?>
 
 #PHP Problem Seti 4
+#Kendimce bir sayı örüntüsü oluşturdum ve çözümü bunun üzerine kurdum fakat loop konusunda problem yaşadım.
 #1. php sayfası
 <html>
         <head>
