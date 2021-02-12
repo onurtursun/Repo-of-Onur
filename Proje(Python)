@@ -1,0 +1,59 @@
+#NOT:BU PRJEDEKİ TAHMİNLER ÖZDEMİR ASAFIN BİR ŞİİRİNDEN ALINTIDIR.
+print("GElECEKTE NE ÖĞRENECEĞİM")
+import datetime
+günümüz = datetime.date.today()
+Günümüz = günümüz.year
+doğum = float(input("-Doğum yılınızı giriniz: "))
+if doğum > Günümüz:
+    print("Gelecek tarih girmeyiniz")
+elif doğum == Günümüz:
+    doğumayı = float(input("Doğum ayınızı başta sıfır kullanmadan giriniz: "))
+    if doğumayı > günümüz.month:
+        print("Gelecek tarih girmeyiniz: ")
+    elif doğumayı == günümüz.month:
+        doğumgünü = float(input("Doğum gününüzü giriniz: "))
+        if doğumgünü > günümüz.day:
+            print("Gelecek tarih girmeyiniz.")
+        else :
+            günolarakyaş = int(günümüz.day - doğumgünü)
+            print(günolarakyaş)
+            print("Gün yaşındasınız.")
+else :
+    yaş = günümüz.year - doğum
+    print("*****")
+    print(int(yaş))
+    print("*****")
+#YAŞ HESAPLAMASI TAMAM
+if yaş<5:
+    print("Anne ve babamın birbirlerine bağırmalarının beni ne kadar korkuttuğunu öğreneceğim.")
+elif 7<yaş<12:
+    print("Meşrubat içerken gülersem içeceğimin burnumdan geleceğini öğreneceğim.")
+elif 12<yaş<15:
+    print("Annemle babamın elele tutusmalarının ve öpüşmelerinin beni daima mutlu ettiğini öğreneceğim.")
+elif 15<yaş<18:
+    print("Bazan hayvanların kalbimi insanlardan daha fazla ısıttığını öğreneceğim.")
+elif 18<yaş<24:
+    print("İlk gençlik yıllarımın keder, şaşkınlık, ıstırap ve aşktan ibaret olduğunu öğreneceğim.")
+elif 24<yaş<33:
+    print("Aşkın kalbimi kırabileceğini ama buna değer olduğunu öğreneceğim.")
+elif 33<yaş<38:
+    print(" Önemli olanın başkalarının benim için ne düşündükleri değil benim kendi hakkımda ne düşündüğüm olduğunu öğreneceğim.")
+elif 38<yaş<44:
+    print("Bir insanın kendine olan güveninin, başarısını büyük oranda belirlediğini öğreneceğim.")
+elif 44<yaş<49:
+    print("Yalnızca minik bir kart göndererek bile birinin gönlünü aydınlatabileceğimi öğreneceğim.")
+elif 49<yaş<53:
+    print("Sevgi, evde üretilmemişse, başka yerde öğrenmenin çok güç olabileceğini öğreneceğim.")
+elif 53<yaş<64:
+    print("Küçük kararları aklımla, büyük kararları ise kalbimle almam gerektiğini öğreneceğim.")
+elif 64<yaş<70:
+    print(" Mutluluğun parfum gibi olduğunu, kendime bulaştırmadan başkalarına veremeyeceğimi öğreneceğim.")
+elif 70<yaş<82:
+    print(" İyi kalpli ve sevecen olmanın, mükemmel olmaktan daha iyi olduğunu öğreneceğim.")
+elif 82<yaş<90:
+    print(" Sancılar içinde kıvransam bile başkalarına basağrısı olmamam gerektiğini öğreneceğim.")
+elif 90<yaş<95:
+    print("Kiminle evleneceğin kararının hayatta verilen en önemli karar olduğunu öğreneceğim.")
+elif 95<yaş:
+    print(" Öğrenmem gereken daha pek çok şeyler olduğunu öğreneceğim.")
+#BİLGİLENDİRME KISIMI BİTTİ
