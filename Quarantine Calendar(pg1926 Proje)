@@ -1,0 +1,75 @@
+#anasayfa
+<html>
+    <head>
+        <title>Quarantine Calendar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./anasayfa.css">
+    </head>
+        <div class="headLine">
+            <h1>Quarantine Calendar</h1>
+        </div>
+        <div id= "ChoiceArea">
+            <form name="seçim" action="kütüphane.php" method="$_POST">
+                <input id="buton" type="submit" value="GENERATE"name="Onayla">
+            </form>
+        </div>
+    <body id="anasayfa">
+    </body>
+</html>
+#php sayfası
+<html>
+    <head><title>QC</title></head>
+    <link rel="stylesheet" href="anasayfa.css">
+    <body id="kütüphane">
+        <?php
+            $rand = array("Kile istediğin şekli verebilirsin","Bir tuvalde duygularını aktarmak","Online sergiler","Bir kurgusal karakteri kara kalemle çizmek","PS gibi programlarda tasarımlarda bulunmak","Ebru sanatı"
+                ,"The Office gibi uzun soluklu bir mocumentary","IMDB Top 250 listesini araştırmak","Naruto evreni ve benzerlerine dalmak","Mehmet Açar'ın yazılarını okumak","Ev ortamında sinema keyfi","Düşük puanlı eserleri değerlendirmek"
+                ,"Spotify,Deezer gib platformları incelemek","Zevkine göre çalma listelerini incelemek","Podcast dinlemek","Podcast kaydetmek ve yayınlamak","Online konserlere katılmak","Kareoke yapmak"
+                ,"Metacritic listelerini incelemek","Online oyun fuarlarını incelemek","Oyun dergileri okumak","Oynamadığın video oyunlarını incelemek","Ailenle masa oyunları oynamak","Rol yapma oyunları uzun süreli serüvenler olabilir"
+                ,"Online makaleler okumak","Çok satan kitapları incelemek","İnternetten manga veya çizgiroman okumak","Yazarların hayatlarını araştırmak","Kitap klüplerinde tartışmalara katılmak"
+                ,"Yazılı kaynakları incelemek","Standford gibi üniversitelerden online dersler almak","Udemy ve Alison gibi sitelerden sertifika almak","Klüp eğitimlerine katılmak","Uzaktan projelere katılmak"
+                ,"Clup House uygulaması","Discord sunucularına katılmak","Sosyal medya platformlarından farklı ülkelerdeki insanlarla tanışmak","Youtube gibi platformları keşfe çıkmak");
+            $hitap = array(", eğlenceli olabilir!",", denemeye değer!",", ilginç olabilir!",", güzel vakit geçirebilrisin!",", iyi vakit geçirebilirsin!",", merak uyandırıcı!");
+                $index = array_rand($rand);
+                $index = (int)$index;
+                echo $rand[$index];
+                $index = array_rand($hitap);
+                $index = (int)$index;
+                echo $hitap[$index];
+        ?>
+    </body>
+</html>
+#css sayfası
+.headLine{
+    color: rebeccapurple;
+    margin-left: -100px;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#buton{
+    color: grey;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    background-color: rebeccapurple;
+    border-radius: 30px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#kütüphane{
+    background-color: grey;
+    text-align: center;
+    margin-top: 300px;
+    font-size: 75px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rebeccapurple;
+}
+#anasayfa{
+    background-color: grey;
+}
